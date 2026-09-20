@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Beauty Files — Nanditha V.</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap');
+
+:root {
+  --black: #0b0b0b;
+  --charcoal: #121212;
+  --paper: #e9e2d5;
+  --muted: #aaa39a;
+  --burgundy: #651c2a;
+  --line: rgba(233,226,213,0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--paper);
+  font-family: "DM Mono", monospace;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--burgundy);
+  color: white;
+}
+
+/* NAVIGATION */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 5vw;
+  background: rgba(11,11,11,0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-logo {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.nav-links a {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+/* GENERAL */
+
+section {
+  padding: 120px 7vw;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(45px, 7vw, 90px);
+  font-weight: 500;
+  line-height: 0.95;
+  margin-bottom: 40px;
+}
+
+.small-title {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.body-copy {
+  max-width: 680px;
+  color: #c5beb5;
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* COVER */
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  background:
+    radial-gradient(circle at 80% 25%, rgba(101,28,42,0.20), transparent 30%),
+    var(--black);
+}
+
+.cover-inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+}
+
+.confidential {
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.cover h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: clamp(68px, 12vw, 170px);
+  line-height: 0.78;
+  letter-spacing: -0.04em;
+  max-width: 1000px;
+}
+
+.cover-name {
+  margin-top: 45px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+.cover-role {
+  margin-top: 10px;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.14em;
+}
+
+.cover-specialization {
+  margin-top: 45px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: #c8c0b6;
+}
+
+.status {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+}
+
+.status strong {
+  display: block;
+  color: #eee;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+.view-file {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 15px 24px;
+  border: 1px solid var(--line);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  transition: 0.3s;
+}
+
+.view-file:hover {
+  background: var(--paper);
+  color: var(--black);
+}
+
+/* CASE NOTES */
+
+.case-notes {
+  background: #101010;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 80px;
+}
+
+.info-block {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  margin-top: 45px;
+}
+
+.info-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.info-value {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+/* INVESTIGATOR */
+
+.investigator {
+  background: var(--charcoal);
+}
+
+.investigator-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 100px;
+  align-items: end;
+}
+
+.name-display {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(55px, 8vw, 110px);
+  line-height: 0.85;
+  font-weight: 500;
+}
+
+.role {
+  margin-top: 25px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+/* SPECIALIZATIONS */
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.spec-box {
+  background: var(--black);
+  padding: 45px;
+  min-height: 260px;
+}
+
+.spec-box h3 {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  margin-bottom: 30px;
+}
+
+.spec-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.spec-list span {
+  border: 1px solid var(--line);
+  padding: 9px 13px;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: #c9c1b7;
+}
+
+/* CASE HISTORY */
+
+.case-history {
+  background: #0e0e0e;
+}
+
+.history-card {
+  border: 1px solid var(--line);
+  padding: 45px;
+  max-width: 850px;
+}
+
+.history-card .creator {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.history-card .details {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+/* ACTIVE CASES */
+
+.case-index {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.case-row {
+  background: var(--black);
+  padding: 32px 35px;
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+  gap: 30px;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.case-row:hover {
+  background: #171717;
+}
+
+.case-number {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+}
+
+.case-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+}
+
+.case-arrow {
+  color: var(--muted);
+}
+
+/* CASE SECTIONS */
+
+.case-section {
+  background: #101010;
+}
+
+.case-header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 45px;
+  margin-bottom: 60px;
+}
+
+.objective {
+  display: inline-block;
+  border-left: 2px solid var(--burgundy);
+  padding: 14px 20px;
+  margin-bottom: 35px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.case-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.case-main-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(55px, 8vw, 105px);
+  font-weight: 500;
+  line-height: 0.9;
+  margin-top: 12px;
+}
+
+/* SUBJECT AREAS */
+
+.subject-area {
+  margin-top: 75px;
+}
+
+.subject-number {
+  color: var(--burgundy);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+.subject-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 43px;
+  margin-top: 8px;
+}
+
+.subtopics {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+/* EVIDENCE */
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.evidence-card {
+  border: 1px solid var(--line);
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.video-placeholder {
+  aspect-ratio: 16 / 9;
+  background:
+    linear-gradient(135deg, #171717, #0b0b0b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+
+.evidence-info {
+  padding: 22px;
+}
+
+.evidence-number {
+  font-size: 9px;
+  color: var(--burgundy);
+  letter-spacing: 0.18em;
+}
+
+.evidence-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  margin-top: 8px;
+}
+
+/* PRODUCT CASE */
+
+.product-types {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.product-type {
+  background: var(--black);
+  padding: 35px;
+  min-height: 220px;
+}
+
+.product-type-number {
+  color: var(--burgundy);
+  font-size: 10px;
+}
+
+.product-type h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.product-type p {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* CREATOR CASE */
+
+.creator-process {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-top: 55px;
+}
+
+.process-step {
+  flex: 1;
+  min-width: 120px;
+  padding: 25px 15px;
+  border-right: 1px solid var(--line);
+}
+
+.process-step:last-child {
+  border-right: 0;
+}
+
+.process-step span {
+  display: block;
+  color: var(--burgundy);
+  font-size: 9px;
+  margin-bottom: 8px;
+}
+
+.process-step strong {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+/* TRANSFORMATION */
+
+.transformation {
+  background: #111;
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--line);
+}
+
+.before-after > div {
+  background: var(--black);
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.transformation-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.transformation-list span {
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  font-size: 9px;
+}
+
+/* WORKFLOW */
+
+.workflow {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.workflow-step {
+  display: grid;
+  grid-template-columns: 100px 220px 1fr;
+  gap: 30px;
+  background: var(--black);
+  padding: 28px;
+}
+
+.workflow-number {
+  color: var(--burgundy);
+  font-size: 10px;
+}
+
+.workflow-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+}
+
+.workflow-description {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* CONTACT */
+
+.contact {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 50% 100%, rgba(101,28,42,0.18), transparent 45%),
+    var(--black);
+}
+
+.contact-inner {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(60px, 10vw, 140px);
+  line-height: 0.85;
+  font-weight: 500;
+}
+
+.contact-sub {
+  margin: 35px auto;
+  max-width: 500px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.contact-button {
+  border: 1px solid var(--line);
+  padding: 15px 22px;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  transition: 0.3s;
+}
+
+.contact-button:hover {
+  background: var(--paper);
+  color: var(--black);
+}
+
+.archive-stamp {
+  display: inline-block;
+  margin-top: 80px;
+  border: 1px solid var(--burgundy);
+  padding: 18px 25px;
+  color: #d4bfc3;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  transform: rotate(-2deg);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 25px 7vw;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  nav {
+    padding: 16px 5vw;
+  }
+
+  .nav-logo {
+    font-size: 9px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 8px;
+  }
+
+  section {
+    padding: 90px 5vw;
+  }
+
+  .cover {
+    min-height: 100svh;
+  }
+
+  .cover h1 {
+    font-size: 68px;
+  }
+
+  .status {
+    position: static;
+    text-align: left;
+    margin-top: 60px;
+  }
+
+  .notes-grid,
+  .investigator-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .spec-grid,
+  .evidence-grid,
+  .product-types {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-box {
+    padding: 30px;
+  }
+
+  .case-row {
+    grid-template-columns: 65px 1fr;
+    gap: 15px;
+  }
+
+  .case-arrow {
+    display: none;
+  }
+
+  .case-name {
+    font-size: 28px;
+  }
+
+  .subject-title {
+    font-size: 36px;
+  }
+
+  .process-step {
+    min-width: 50%;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .workflow-step {
+    grid-template-columns: 45px 1fr;
+  }
+
+  .workflow-description {
+    grid-column: 2;
+  }
+
+  .before-after {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-title {
+    font-size: 65px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <a href="#top" class="nav-logo">NANDITHA V.</a>
+
+  <div class="nav-links">
+    <a href="#beauty">BEAUTY</a>
+    <a href="#ugc">UGC</a>
+    <a href="#creator">CREATOR</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+</nav>
+
+
+<!-- COVER -->
+
+<section class="cover" id="top">
+  <div class="cover-inner">
+
+    <div class="confidential">CONFIDENTIAL</div>
+
+    <h1>THE<br>BEAUTY<br>FILES</h1>
+
+    <div class="cover-name">NANDITHA V.</div>
+
+    <div class="cover-role">
+      VIDEO EDITOR • UGC CREATOR
+    </div>
+
+    <div class="cover-specialization">
+      BEAUTY • LIFESTYLE • SELF-CARE
+    </div>
+
+    <a href="#notes" class="view-file">
+      VIEW THE FILE →
+    </a>
+
+    <div class="status">
+      VISUAL CONTENT INVESTIGATION UNIT
+      <strong>CASE STATUS: OPEN</strong>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CASE NOTES -->
+
+<section class="case-notes" id="notes">
+  <div class="container">
+
+    <div class="eyebrow">CASE NOTES</div>
+
+    <div class="section-title">
+      THE CASE
+    </div>
+
+    <div class="notes-grid">
+
+      <div>
+        <p class="body-copy">
+          Beauty content is everywhere. But why do some videos make you stop
+          scrolling while others disappear in seconds?
+          <br><br>
+          That’s the case I’m interested in.
+          <br><br>
+          Nanditha specializes in turning raw footage into visual stories
+          designed to capture attention, communicate the subject and keep
+          the viewer watching.
+        </p>
+      </div>
+
+      <div>
+
+        <div class="info-block">
+          <div class="info-label">SPECIALIZATION</div>
+          <div class="info-value">
+            BEAUTY • LIFESTYLE • SELF-CARE<br>
+            UGC • CREATOR CONTENT
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-label">CASE OBJECTIVE</div>
+          <div class="info-value">
+            TURN RAW FOOTAGE AND IDEAS<br>
+            INTO CONTENT WORTH WATCHING.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- INVESTIGATOR -->
+
+<section class="investigator">
+  <div class="container">
+
+    <div class="eyebrow">PERSON OF INTEREST</div>
+
+    <div class="investigator-grid">
+
+      <div>
+        <div class="name-display">
+          THE<br>INVESTIGATOR
+        </div>
+        <div class="role">
+          NANDITHA V.<br>
+          VIDEO EDITOR • UGC CREATOR
+        </div>
+      </div>
+
+      <div>
+        <p class="body-copy">
+          Strong hooks. Intentional pacing. Storytelling that feels natural.
+          Aesthetic visuals supported by sound design, captions and clean
+          editing.
+          <br><br>
+          The goal is simple: make every frame earn its place.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SPECIALIZATIONS & TOOLS -->
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">SPECIALIZATIONS & TOOLS</div>
+
+    <div class="section-title">
+      EDITOR’S KIT
+    </div>
+
+    <div class="spec-grid">
+
+      <div class="spec-box">
+        <h3>SPECIALIZATIONS</h3>
+
+        <div class="spec-list">
+          <span>BEAUTY</span>
+          <span>LIFESTYLE</span>
+          <span>SELF-CARE</span>
+          <span>UGC</span>
+          <span>CREATOR CONTENT</span>
+        </div>
+      </div>
+
+      <div class="spec-box">
+        <h3>TOOLS & KNOWLEDGE</h3>
+
+        <div class="spec-list">
+          <span>VIDEO EDITING</span>
+          <span>SHORT-FORM EDITING</span>
+          <span>LONG-FORM EDITING</span>
+          <span>HOOKS</span>
+          <span>STORYTELLING</span>
+          <span>CAPTIONS</span>
+          <span>SOUND DESIGN</span>
+          <span>COLOR</span>
+          <span>CONTENT STRUCTURE</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CASE HISTORY -->
+
+<section class="case-history">
+  <div class="container">
+
+    <div class="eyebrow">CASE HISTORY</div>
+
+    <div class="section-title">
+      PREVIOUS CASE
+    </div>
+
+    <div class="history-card">
+
+      <div class="small-title">CLIENT / CREATOR</div>
+
+      <div class="creator">
+        THAT DELHI GIRL
+      </div>
+
+      <div class="details">
+        TANYA
+        <br><br>
+        BEAUTY & LIFESTYLE CREATOR
+        <br><br>
+        ROLE: VIDEO EDITOR
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ACTIVE CASES -->
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">ACTIVE CASES</div>
+
+    <div class="section-title">
+      ARCHIVE INDEX
+    </div>
+
+    <div class="case-index">
+
+      <a href="#beauty" class="case-row">
+        <div class="case-number">CASE 001</div>
+        <div class="case-name">THE BEAUTY FILE</div>
+        <div class="case-arrow">→</div>
+      </a>
+
+      <a href="#ugc" class="case-row">
+        <div class="case-number">CASE 002</div>
+        <div class="case-name">THE PRODUCT FILE</div>
+        <div class="case-arrow">→</div>
+      </a>
+
+      <a href="#creator" class="case-row">
+        <div class="case-number">CASE 003</div>
+        <div class="case-name">THE CREATOR FILE</div>
+        <div class="case-arrow">→</div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CASE 001 -->
+
+<section class="case-section" id="beauty">
+
+  <div class="container">
+
+    <div class="case-header">
+
+      <div class="objective">
+        OBJECTIVE — MAKE THE VIEWER STOP SCROLLING.
+      </div>
+
+      <div class="case-label">CASE 001</div>
+
+      <div class="case-main-title">
+        THE BEAUTY FILE
+      </div>
+
+    </div>
+
+
+    <!-- SELF CARE -->
+
+    <div class="subject-area">
+
+      <div class="subject-number">01 — SELF-CARE</div>
+
+      <div class="subject-title">
+        SELF-CARE
+      </div>
+
+      <div class="subtopics">
+        SKINCARE • HAIRCARE • BODY CARE
+      </div>
+
+      <div class="evidence-grid">
+
+        <div class="evidence-card">
+          <div class="video-placeholder">
+            YOUR VIDEO HERE
+          </div>
+
+          <div class="evidence-info">
+            <div class="evidence-number">EVIDENCE 001</div>
+            <div class="evidence-title">Your Skincare Project</div>
+          </div>
+        </div>
+
+        <div class="evidence-card">
+          <div class="video-placeholder">
+            YOUR VIDEO HERE
+          </div>
+
+          <div class="evidence-info">
+            <div class="evidence-number">EVIDENCE 002</div>
+            <div class="evidence-title">Your Haircare Project</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- FASHION + LIFESTYLE -->
+
+    <div class="subject-area">
+
+      <div class="subject-number">02 — FASHION + LIFESTYLE</div>
+
+      <div class="subject-title">
+        FASHION + LIFESTYLE
+      </div>
+
+      <div class="subtopics">
+        MAKEUP / GET READY WITH ME • LIFESTYLE
+      </div>
+
+      <div class="evidence-grid">
+
+        <div class="evidence-card">
+          <div class="video-placeholder">
+            YOUR VIDEO HERE
+          </div>
+
+          <div class="evidence-info">
+            <div class="evidence-number">EVIDENCE 003</div>
+            <div class="evidence-title">Your GRWM Project</div>
+          </div>
+        </div>
+
+        <div class="evidence-card">
+          <div class="video-placeholder">
+            YOUR VIDEO HERE
+          </div>
+
+          <div class="evidence-info">
+            <div class="evidence-number">EVIDENCE 004</div>
+            <div class="evidence-title">Your Lifestyle Project</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CASE 002 -->
+
+<section class="case-section" id="ugc">
+
+  <div class="container">
+
+    <div class="case-header">
+
+      <div class="case-label">CASE 002</div>
+
+      <div class="case-main-title">
+        THE PRODUCT FILE
+      </div>
+
+      <p class="body-copy" style="margin-top:30px;">
+        UGC CONTENT CREATION
+      </p>
+
+    </div>
+
+    <div class="product-types">
+
+      <div class="product-type">
+        <div class="product-type-number">01</div>
+        <h3>PRODUCT HAUL</h3>
+        <p>Product-focused content designed around discovery and presentation.</p>
+      </div>
+
+      <div class="product-type">
+        <div class="product-type-number">02</div>
+        <h3>PRODUCT TEXTURE / EXPERIE
